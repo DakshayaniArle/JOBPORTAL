@@ -1,0 +1,96 @@
+# ===================================================================
+# Root .gitignore for JobPortal Monorepo / Multi-project Workspace
+# Covers Eclipse/STS workspace metadata, Spring Boot backend, and Vite React frontend
+# ===================================================================
+
+# -------------------------------------------------------------------
+# Eclipse / STS Workspace Metadata
+# -------------------------------------------------------------------
+.metadata/
+.recommenders/
+.sts4-cache/
+.apt_generated/
+.settings/
+.classpath
+.project
+.factorypath
+.springBeans
+
+# -------------------------------------------------------------------
+# Environment Variables & Secrets (CRITICAL)
+# -------------------------------------------------------------------
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# Do not ignore template files so other developers know required variables
+!.env.example
+!**/jobportal/.env.example
+!**/jobportal-frontend/.env.example
+
+# -------------------------------------------------------------------
+# Uploaded User Data & Resumes
+# -------------------------------------------------------------------
+uploads/
+uploads/**
+**/uploads/
+**/uploads/**
+
+# -------------------------------------------------------------------
+# Backend (Spring Boot / Maven / Java) Build Artifacts
+# -------------------------------------------------------------------
+target/
+**/target/
+build/
+**/build/
+bin/
+**/bin/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# -------------------------------------------------------------------
+# Frontend (Node / Vite / React) Dependencies & Build Output
+# -------------------------------------------------------------------
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+dist-ssr/
+**/dist-ssr/
+
+# -------------------------------------------------------------------
+# Logs & Temporary Files
+# -------------------------------------------------------------------
+*.log
+logs/
+**/logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.~lock.*#
+*.tmp
+
+# -------------------------------------------------------------------
+# IDE & Operating System Files
+# -------------------------------------------------------------------
+.idea/
+**/.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+**/.vscode/
+!**/.vscode/extensions.json
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
